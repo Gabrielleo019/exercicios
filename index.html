@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios 19/04 - Lucimara</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        input[type="button"] {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #7e7e7e;">
+    <br>
+
+         <div class="alert" role="alert" style="background-color: rgba(0, 0, 0, 0.253); font-size: 20px;">
+            1. Fazer uma calculadora simples com os procedimentos de somar, subtrair, dividir e multiplicar. 
+          </div>     
+
+          <br>
+
+           <div id="titulo">
+            <h1 class="display-3 text-center" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Calculadora</h1>
+        </div>
+
+            <div id="calculator"class="form-group col-md-2 text-center " style="margin-left: 42%; background-color: rgba(0, 0, 0, 0.5); border-radius:  10%;width: 350px; height: 350px; padding-top: 20px;" >
+                    <input type="text" class="form-control" id="display" readonly><br>
+                    <input type="button" class="btn btn-secondary" value="7" onclick="addDisplay('7')">
+                    <input type="button" class="btn btn-secondary" value="8" onclick="addDisplay('8')">
+                    <input type="button" class="btn btn-secondary" value="9" onclick="addDisplay('9')">
+                    <input type="button" class="btn btn-secondary" value="/" onclick="addDisplay('/')"><br>
+                    <input type="button" class="btn btn-secondary" value="4" onclick="addDisplay('4')">
+                    <input type="button" class="btn btn-secondary" value="5" onclick="addDisplay('5')">
+                    <input type="button" class="btn btn-secondary" value="6" onclick="addDisplay('6')">
+                    <input type="button" class="btn btn-secondary" value="*" onclick="addDisplay('*')"><br>
+                    <input type="button" class="btn btn-secondary" value="1" onclick="addDisplay('1')">
+                    <input type="button" class="btn btn-secondary" value="2" onclick="addDisplay('2')">
+                    <input type="button" class="btn btn-secondary" value="3" onclick="addDisplay('3')">
+                    <input type="button" class="btn btn-secondary" value="-" onclick="addDisplay('-')"><br>
+                    <input type="button" class="btn btn-secondary" value="0" onclick="addDisplay('0')">
+                    <input type="button" class="btn btn-secondary" value="." onclick="addDisplay('.')">
+                    <input type="button" class="btn btn-secondary" value="=" onclick="calcular()">
+                    <input type="button" class="btn btn-secondary" value="+" onclick="addDisplay('+')"><br>
+                    <input type="button" class="btn btn-secondary" value="C" onclick="limparDisplay()">
+                </div>
+
+
+
+
+        <br>
+         <br>
+         <br>
+         <div class="alert" role="alert" style="background-color: rgba(0, 0, 0, 0.253); font-size: 20px;">
+            2. Acrescentar ao exercício anterior um procedimento para calcular o quadrado de um número real digitado pelo usuário.
+          </div>   
+          <div id="titulo">
+            <h1 class="display-3 text-center" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Calcular o quadrado de 
+um número real digitado</h1>
+        </div>      
+          <br>
+          <div id="calcularQuadrado"class="form-group col-md-2 text-center " style="margin-left: 42%; background-color: rgba(0, 0, 0, 0.5); border-radius:  10%;width: 350px; height: 350px; padding-top: 20px;" >
+            <input type="text" class="form-control" id="display2" readonly><br>
+            <input type="button" class="btn btn-secondary" value="7" onclick="addDisplay2('7')">
+            <input type="button" class="btn btn-secondary" value="8" onclick="addDisplay2('8')">
+            <input type="button" class="btn btn-secondary" value="9" onclick="addDisplay2('9')"><br>
+            <input type="button" class="btn btn-secondary" value="4" onclick="addDisplay2('4')">
+            <input type="button" class="btn btn-secondary" value="5" onclick="addDisplay2('5')">
+            <input type="button" class="btn btn-secondary" value="6" onclick="addDisplay2('6')"><br>
+            <input type="button" class="btn btn-secondary" value="1" onclick="addDisplay2('1')">
+            <input type="button" class="btn btn-secondary" value="2" onclick="addDisplay2('2')">
+            <input type="button" class="btn btn-secondary" value="3" onclick="addDisplay2('3')"><br>
+            <input type="button" class="btn btn-secondary" value="0" onclick="addDisplay2('0')">
+            <input type="button" class="btn btn-secondary" value="=" onclick="calcular2()">
+            <input type="button" class="btn btn-secondary" value="C" onclick="limparDisplay2()">
+        </div>
+        
+
+
+        <br>
+         <br>
+         <br>
+         <div class="alert" role="alert" style="background-color: rgba(0, 0, 0, 0.253); font-size: 20px;">
+3. Utilizando o exercício de conversão de temperatura já visto anteriormente, 
+resolvê-lo aplicando o conceito de procedimentos. A partir de uma temperatura e 
+opção de conversão fornecidas pelo usuário, realize conversão entre 
+temperaturas conforme ilustrado pela tabela a seguir. Após cada conversão o 
+programa deverá perguntar se o usuário deseja realizar uma nova conversão. 
+Quando o usuário digitar “sim” uma nova temperatura e a opção de conversão 
+deverão ser solicitadas, caso contrário, o programa deverá ser encerrado.     
+   </div>   
+          <div id="titulo">
+            <h1 class="display-3 text-center" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Conversão temperatura</h1>
+        </div>      
+          <br>
+          <div id="converterTemp"class="form-group col-md-2 " style=" background-color: rgba(0, 0, 0, 0.5); border-radius:  10%;width: 125px; height: 85px; margin-left: 47.5%;" >
+            <br>
+            <button type="button" class="btn btn-secondary "  onclick="converter()">Converter</button>
+        </div>
+                    
+
+
+        <br>
+         <br>
+         <br>
+         <div class="alert" role="alert" style="background-color: rgba(0, 0, 0, 0.253); font-size: 20px;">
+            4. Dada uma sequência de 5 números inteiros digitados pelo usuário, determinar e exibir a média.      
+        </div>   
+          <div id="titulo">
+            <h1 class="display-3 text-center" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Média 5 números</h1>
+        </div>      
+          <br>
+          <div id="mediaNum"class="form-group col-md-2 " style=" background-color: rgba(0, 0, 0, 0.5); border-radius:  10%;width: 98px; height: 85px; margin-left: 48.5%;" >
+            <br>
+            <button type="button" class="btn btn-secondary "  onclick="media()">iniciar</button>
+        </div>
+
+
+
+        <br>
+         <br>
+         <br>
+         <div class="alert" role="alert" style="background-color: rgba(0, 0, 0, 0.253); font-size: 20px;">
+            5. Considerando três nomes, digitados pelo usuário, exibi-los em ordem alfabética        </div>   
+          <div id="titulo">
+            <h1 class="display-3 text-center" style="font-family:Verdana, Geneva, Tahoma, sans-serif;">Nome ordem alfabetica</h1>
+        </div>      
+          <br>
+          <div id="ordenarNomes"class="form-group col-md-2 " style=" background-color: rgba(0, 0, 0, 0.5); border-radius:  10%;width: 98px; height: 85px; margin-left: 48.5%;" >
+            <br>
+            <button type="button" class="btn btn-secondary "  onclick="ordenarNomes()">iniciar</button>
+        </div>
+<br>
+<br>
+<br>
+
+
+
+<script src="exercicios.js"></script>
+</body>
+</html>
